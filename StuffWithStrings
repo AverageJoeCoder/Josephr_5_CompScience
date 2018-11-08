@@ -1,0 +1,78 @@
+package josephr_5_stuffwithstrings;
+
+import java.util.Scanner; //imports the scanner which takes user input
+import java.util.Random; //imports the random object which is then used in the guessing game portion of this program
+public class Josephr_5_StuffWithStrings {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); //the scanner named input, is declared and initialized
+        System.out.println(Hello brave traveller what is your name?);
+        String name = input.nextLine(); //allows the user to actually type in what they want
+//        System.out.println(How old are you?);
+//        int age = input.nextInt();
+        System.out.println(Pick a number);
+        input.nextLine();
+        
+        
+        
+        System.out.println(Oh I like that number but it isnt my favorite. \nDo you want to guess my favorite number, yes or no?");
+        String yn = "s";
+while(!yn.startsWith("y") && !yn.startsWith("Y") && !yn.startsWith("N") && !yn.startsWith("n")){ yn = input.nextLine();
+        if(yn.startsWith("y") || yn.startsWith("Y")){
+            
+        Scanner userinput = new Scanner(System.in); //makes userinput the variable for the scanner object
+        Random mcrandy = new Random(); //makes a new random object called mcrandy
+        System.out.println("Hey lets play a game, try to guess my favorite number);
+        int magicnum = mcrandy.nextInt(100); //makes variable for the random number that can be used in pur if statements
+        int number = 15; //same but for the guess (objects don't match with variables)
+        while(number!= magicnum){ number  = userinput.nextInt();  //just says that while the person has not guessed the number then they can continue to guess
+        if(number == magicnum){ System.out.println(You got it right my favorite number is  + number); }
+        else if (magicnum > number){ System.out.println(Too low, guess again);
+        }
+        else { System.out.println(Too high, guess again);
+        }
+        }
+        System.out.println(You should ask the stranger a question, after all youve been the one talking this whole time");
+    }
+        else if (yn.startsWith("n") || yn.startsWith("N")){
+            System.out.println("Oh ok well.....");
+            System.out.println("You should ask the stranger a question to break the awkward silence");
+        }
+        else{
+            System.out.println("That was not an option, answer again");
+        }
+}
+
+
+
+        System.out.println(" A = Whats your name? n B = Where are you from? n C = Where am I and do you know the way out?);
+        String q = s;
+        if(q.contains(A) || q.contains(a)){
+            System.out.println(My name is sir turtleton the cool);
+        }
+        else if(q.contains(B) || q.contains(b)){
+            System.out.println(Here);
+//            System.out.println(A = Can you elaborate? nB = Ok);
+//            String clarify = input.nextLine();
+//             if(q.contains(A) || q.contains(a)){
+//            System.out.println(Yes);
+//        }
+//             else{      
+//             }   
+        }
+        else if(q.contains(C) || q.contains(c)){
+            System.out.println(You are on a computer right now, all you have do to get out is stop playing this game);
+        }
+        else {
+              System.out.println(Sorry that was not an option, please ask again);
+        }
+        
+//        else if(q != c && q != C  && q != b && q != B && q != A && q != a){
+//            System.out.println(Sorry that was not an option, please ask again);
+        }
+    }
+    
+}
+
+
+
+
